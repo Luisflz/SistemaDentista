@@ -1,0 +1,58 @@
+<mxfile host="65bd71144e">
+    <diagram id="P5tNcSSbG7bXW8mCQGP-" name="Página-1">
+        <mxGraphModel dx="1251" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Paciente " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="-810" y="270" width="190" height="184" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="- nombre : String&#10;- edad : int &#10;- citas : List&lt;Cita&gt;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="190" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
+                    <mxGeometry y="74" width="190" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+ Paciente(nombre : String,&#10;edad : int)&#10;+ agendarCita(cita : Cita): void&#10;+ cancelarCita(numeroCita): void&#10;+ mosatarCitas() : List&lt;Cita&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="82" width="190" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Dentista " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="-130" y="220" width="190" height="282" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="- nombre : String&#10;- citas : List&lt;Cita&gt;&#10;- notas : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
+                    <mxGeometry y="26" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="6" vertex="1">
+                    <mxGeometry y="76" width="190" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+ Dentista(nombre : String,&#10;notas : String)&#10;+ actualizarNota(numeroCita: int,&#10;nota : String): void&#10;+ MosatrarNotas(): String&#10;+ MostarCitas() : List&lt;Cita&gt;&#10;+ Recepcionista(nombre : String)&#10;+ agendarCita(cita : Cita): void&#10;+ cambiarCita(numeroCita: int,&#10;tratamiento : String,   &#10;nuevaFecha : String, nuevaHora: &#10;String)&#10;+ cancelarCita(numeroCita: int) : void   &#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
+                    <mxGeometry y="84" width="190" height="198" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Cita" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="-450" y="220" width="160" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="- numeroCita : int&#10;- tratamiento : String&#10;- fecha : String&#10;- hora : String&#10;- estado : String&#10;- paciente : Paciente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="10" vertex="1">
+                    <mxGeometry y="26" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="10" vertex="1">
+                    <mxGeometry y="136" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="+ Cita(numeroCita : int,&#10;tratamiento : String,&#10;fecha : String, hora : String,&#10;estado : String,&#10;paciente : Paciente)&#10;+ confirmarCita(): void&#10;+ cancelarCita(): void&#10;+ mostrarCita(): void&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="10" vertex="1">
+                    <mxGeometry y="144" width="160" height="136" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" parent="1" edge="1">
+                    <mxGeometry x="-1" y="3" relative="1" as="geometry">
+                        <mxPoint x="-610" y="352" as="sourcePoint"/>
+                        <mxPoint x="-450" y="352" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" parent="1" edge="1">
+                    <mxGeometry x="-1" y="3" relative="1" as="geometry">
+                        <mxPoint x="-140" y="350" as="sourcePoint"/>
+                        <mxPoint x="-290" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
